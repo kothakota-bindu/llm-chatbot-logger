@@ -9,9 +9,12 @@ load_dotenv()
 client = Groq(api_key = os.environ.get("YOUR_GROQ_API_KEY"),
     )
 
-with open("chat_logs.csv", "w", newline="") as file:
+file_exists = os.path.exists("chat_logs.csv")
+
+with open("chat_logs.csv", "a", newline="") as file:
     writer = csv.writer(file)
-    writer.writerow(["Question", "Answer", "Response Time (s)"])
+    if not file_exists:
+        writer.writerow(["Question", "Answer", "Response Time (s)"])
    
 while(True):
     user_input = input("You: ")
