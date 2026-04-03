@@ -28,3 +28,6 @@ A simple command-line chatbot built with Groq API (LLaMA 3.3 70B) that logs ever
 - Python 3.10+
 - Groq API (LLaMA 3.3 70B)
 - python-dotenv
+
+## Running Tests
+pytest test_chatbot.py -v
