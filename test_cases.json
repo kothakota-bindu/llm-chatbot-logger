@@ -1,0 +1,17 @@
+[
+    {
+        "input": "What are symptoms of high blood pressure?",
+        "expected_output": "Symptoms include headaches, dizziness, and shortness of breath.",
+        "retrieval_context": ["High blood pressure symptoms include headaches, dizziness, and shortness of breath."]
+    },
+    {
+        "input": "What causes diabetes?",
+        "expected_output": "Diabetes is caused by insufficient insulin production or insulin resistance.",
+        "retrieval_context": ["Diabetes occurs when the pancreas doesn't produce enough insulin or the body can't use insulin effectively."]
+    },
+    {
+        "input": "What are symptoms of flu?",
+        "expected_output": "Flu symptoms include fever, chills, muscle aches, cough, and fatigue.",
+        "retrieval_context": ["Influenza symptoms include fever, chills, muscle aches, cough, congestion, and fatigue."]
+    }
+]

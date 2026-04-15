@@ -3,6 +3,7 @@ from deepeval import assert_test
 from deepeval.dataset import EvaluationDataset, Golden
 from deepeval.test_case import LLMTestCase, LLMTestCaseParams
 from deepeval.metrics import FaithfulnessMetric, AnswerRelevancyMetric, ContextualRecallMetric , GEval
+from dataset import dataset
 
 # import judge from test_deepeval.py
 from test_deepeval1 import judge
@@ -24,20 +25,20 @@ def get_llm_response(prompt):
     return response.choices[0].message.content
 
 # dataset with multiple test cases
-dataset = EvaluationDataset([   
-    Golden(
-        input="What are symptoms of high blood pressure?",
-        #actual_output="Symptoms include headaches and dizziness.",
-        expected_output="Symptoms include headaches, dizziness, and shortness of breath.",
-        retrieval_context=["High blood pressure symptoms include headaches, dizziness, and shortness of breath."]
-    ),
-    Golden(
-        input="What causes diabetes?",
-        #actual_output="Diabetes is caused by insufficient insulin production.",
-        expected_output="Diabetes is caused by insufficient insulin production or insulin resistance.",
-        retrieval_context=["Diabetes occurs when the pancreas doesn't produce enough insulin or the body can't use insulin effectively."]
-    )
-])
+# dataset = EvaluationDataset([   
+#     Golden(
+#         input="What are symptoms of high blood pressure?",
+#         #actual_output="Symptoms include headaches and dizziness.",
+#         expected_output="Symptoms include headaches, dizziness, and shortness of breath.",
+#         retrieval_context=["High blood pressure symptoms include headaches, dizziness, and shortness of breath."]
+#     ),
+#     Golden(
+#         input="What causes diabetes?",
+#         #actual_output="Diabetes is caused by insufficient insulin production.",
+#         expected_output="Diabetes is caused by insufficient insulin production or insulin resistance.",
+#         retrieval_context=["Diabetes occurs when the pancreas doesn't produce enough insulin or the body can't use insulin effectively."]
+#     )
+# ])
 
 # metrics
 metrics = [
