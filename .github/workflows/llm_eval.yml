@@ -27,4 +27,4 @@ jobs:
         env:
           YOUR_GROQ_API_KEY: ${{ secrets.YOUR_GROQ_API_KEY }}
         run: |
-          deepeval test run test_deepeval_pytest.py
+          deepeval test run .
