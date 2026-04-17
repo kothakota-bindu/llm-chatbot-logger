@@ -21,10 +21,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install deepeval groq python-dotenv
+          pip install deepeval groq python-dotenv pytest
 
       - name: Run DeepEval tests
         env:
           YOUR_GROQ_API_KEY: ${{ secrets.YOUR_GROQ_API_KEY }}
         run: |
-          deepeval test run .
+          pytest . -v
