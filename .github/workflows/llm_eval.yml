@@ -27,4 +27,4 @@ jobs:
         env:
           YOUR_GROQ_API_KEY: ${{ secrets.YOUR_GROQ_API_KEY }}
         run: |
-          pytest . -v
+          pytest test_redteam.py test_deepeval_pytest.py -v
