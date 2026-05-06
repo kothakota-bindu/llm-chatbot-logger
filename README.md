@@ -70,7 +70,7 @@ The evaluation framework automatically tests four critical areas:
 Medical-chatbot/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml                  # CI/CD — runs on every push
+│       └── llm_eval.yml                  # CI/CD — runs on every push
 │                                   # Main tests: test_deepeval_pytest.py
 │                                   #             test_redteam.py
 ├── chatbot.py                      # Medical chatbot (Groq + LLaMA 3.1 8B)
